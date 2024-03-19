@@ -38,9 +38,15 @@ h6 {
 }
 #root {
   isolation: isolate;
-  background-color: tomato;
   width: 100dvw;
   height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/images/background-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* reset.css 설정 완료 */
 
