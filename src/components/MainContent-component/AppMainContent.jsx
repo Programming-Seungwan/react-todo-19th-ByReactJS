@@ -9,6 +9,9 @@ const StyledAppMainContent = styled.main`
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export default function AppMainContent() {
