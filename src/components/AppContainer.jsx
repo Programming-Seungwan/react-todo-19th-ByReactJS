@@ -1,12 +1,18 @@
 import styled from 'styled-components'
+import SideBar from './SideBar-component/SideBar'
+import AppMainContent from './MainContent-component/AppMainContent'
 
-const StyledAppContainer = styled.main`
+const StyledAppContainer = styled.div`
   width: 70%;
   max-width: 70%;
   min-width: 70%;
-  height: 80vh;
+  height: 100vh;
+  display: flex;
 `
 
 export default function AppContainer() {
-  return <StyledAppContainer>hi</StyledAppContainer>
+  return <StyledAppContainer>
+    <SideBar/>
+    <AppMainContent/>
+  </StyledAppContainer>
 }
