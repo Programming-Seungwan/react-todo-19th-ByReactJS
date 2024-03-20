@@ -12,12 +12,14 @@ const StyledAppMainContent = styled.main`
   @media screen and (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 
 export default function AppMainContent() {
-  return <StyledAppMainContent>
-    <MainContentHeader />
-    <MainContentBody />
-    <MainContentFooter />
-  </StyledAppMainContent>
+  return (
+    <StyledAppMainContent>
+      <MainContentHeader />
+      <MainContentBody />
+      <MainContentFooter />
+    </StyledAppMainContent>
+  );
 }

@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const StyledTodoLabel = styled.div`
   position: fixed;
-`
+`;
 
 export default function TodoLabel() {
-  return <StyledTodoLabel>Todo</StyledTodoLabel>
+  return <StyledTodoLabel>Todo</StyledTodoLabel>;
 }
