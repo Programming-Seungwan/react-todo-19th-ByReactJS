@@ -1,14 +1,18 @@
 import styled from 'styled-components';
-import TodoLabel from './TodoLabel';
-import DoneLabel from './DoneLabel';
+import TodoContainer from './TodoContainer/TodoContainer';
+import DoneContainer from './DoneContainer/DoneContainer';
 
-const StyledOneDayContainer = styled.div``;
+const StyledOneDayContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
 
 export default function OneDayContainer() {
   return (
     <StyledOneDayContainer>
-      <TodoLabel />
-      <DoneLabel />
+      <TodoContainer />
+      <DoneContainer />
     </StyledOneDayContainer>
   );
 }

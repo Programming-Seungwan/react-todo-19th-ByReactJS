@@ -4,11 +4,12 @@ import MainContentBody from './MainContent-Body/MainContentBody';
 import MainContentFooter from './MainContent-Footer/MainContentFooter';
 
 const StyledAppMainContent = styled.main`
-  width: 70%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  position: relative;
   @media screen and (max-width: 768px) {
     width: 100%;
   }

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const StyledMainContentHeader = styled.header`
   height: 80px;
-  position: fixed;
+  position: absolute;
+  width: 100%;
 `;
 
 export default function MainContentHeader() {
