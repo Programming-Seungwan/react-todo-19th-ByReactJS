@@ -38,6 +38,9 @@ const StyledTodoTextInput = styled.input`
 const StyledTodoSubmitButton = styled(FontAwesomeIcon)`
   width: 30px;
   height: 30px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default function TodoInput() {
@@ -50,8 +53,8 @@ export default function TodoInput() {
     setSelectedDayDoneList,
   } = useContext(ThemeContext);
   const todoInputRef = useRef();
-  function handleSubmitTodoInputForm(event) {
-    event.preventDefault();
+
+  function handleClickPlusLogoButton() {
     const localStorageKey = `${selectedDayString}todo`;
     const prevLocalStorageData =
       localStorage.getItem(localStorageKey) === null
@@ -65,6 +68,12 @@ export default function TodoInput() {
     setSelectedDayTodoList(prevLocalStorageData);
     todoInputRef.current.value = '';
   }
+
+  function handleSubmitTodoInputForm(event) {
+    event.preventDefault();
+    handleClickPlusLogoButton();
+  }
+
   return (
     <StyledInputFormContainer onSubmit={handleSubmitTodoInputForm}>
       <StyledInputForm>
@@ -73,7 +82,10 @@ export default function TodoInput() {
           placeholder="Add your new Todo List!"
           ref={todoInputRef}
         />
-        <StyledTodoSubmitButton icon={faCirclePlus} />
+        <StyledTodoSubmitButton
+          icon={faCirclePlus}
+          onClick={handleClickPlusLogoButton}
+        />
       </StyledInputForm>
     </StyledInputFormContainer>
   );
