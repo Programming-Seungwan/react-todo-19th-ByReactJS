@@ -8,6 +8,7 @@ const StyledAppContainer = styled.div`
   min-width: 90%;
   height: 100vh;
   display: flex;
+  margin: 0 auto;
 `;
 
 export default function AppContainer() {
