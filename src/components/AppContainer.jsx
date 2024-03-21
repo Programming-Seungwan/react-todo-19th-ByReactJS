@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import SideBar from './SideBar-component/SideBar';
 import AppMainContent from './MainContent-component/AppMainContent';
+import { ThemeContext } from '../context';
 
 const StyledAppContainer = styled.div`
   width: 90%;
@@ -18,10 +20,14 @@ const StyledAppContainer = styled.div`
 `;
 
 export default function AppContainer() {
+  const [selectedDayString, setSelectedDayString] = useState(new Date().toISOString().slice(0, 10));
+
   return (
-    <StyledAppContainer>
-      <SideBar />
-      <AppMainContent />
-    </StyledAppContainer>
+    <ThemeContext.Provider value={{ selectedDayString, setSelectedDayString }}>
+      <StyledAppContainer>
+        <SideBar />
+        <AppMainContent />
+      </StyledAppContainer>
+    </ThemeContext.Provider>
   );
 }

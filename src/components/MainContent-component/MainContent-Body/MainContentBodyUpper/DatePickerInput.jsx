@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { ThemeContext } from '../../../../context';
+import { useContext } from 'react';
 
 const StyledDatePickerInputContainer = styled.div`
   flex-grow: 1;
@@ -21,9 +23,15 @@ const StyledDatePickerInput = styled.input`
 `;
 
 export default function DatePickerInput(second) {
+  const {selectedDayString, setSelectedDayString} = useContext(ThemeContext);
+
+  function handleChangeDate(event) {
+    const newSelectedDayString = event.target.value;
+    setSelectedDayString(newSelectedDayString);
+  }
   return (
     <StyledDatePickerInputContainer>
-      <StyledDatePickerInput type="date" />
+      <StyledDatePickerInput type="date" onChange={handleChangeDate} value={selectedDayString}/>
     </StyledDatePickerInputContainer>
   );
 }

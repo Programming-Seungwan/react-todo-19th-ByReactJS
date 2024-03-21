@@ -12,9 +12,10 @@ const StyledInputForm = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 5px;
+  column-gap: 15px;
   @media screen  and (max-width: 768px){
     justify-content: space-evenly;
+    column-gap: 0;
   };
 `;
 
