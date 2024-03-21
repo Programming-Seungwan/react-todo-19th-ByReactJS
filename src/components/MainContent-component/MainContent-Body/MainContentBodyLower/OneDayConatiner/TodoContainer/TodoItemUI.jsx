@@ -84,7 +84,10 @@ export default function TodoItemUI({ text }) {
 
     const prevLocalStorageIndex = prevLocalStorageData.indexOf(text);
     prevLocalStorageData.splice(prevLocalStorageIndex, 1);
-    localStorage.setItem(localStorageTodoKey, prevLocalStorageData);
+    localStorage.setItem(
+      localStorageTodoKey,
+      JSON.stringify(prevLocalStorageData)
+    );
     setSelectedDayTodoList(prevLocalStorageData);
   }
   return (
