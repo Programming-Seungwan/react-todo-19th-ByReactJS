@@ -5,10 +5,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftLong, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const StyledDoneItemUI = styled.div`
-  background-color: tomato;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 20%;
+  min-height: 20%;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  &:hover {
+    background-color: #d5e9cb;
+  }
 `;
 
 const StyledDoneItemText = styled.p`
@@ -91,7 +101,7 @@ export default function DoneItemUI({ text }) {
   }
   return (
     <StyledDoneItemUI>
-      <StyledDoneItemText>{text}</StyledDoneItemText>
+      <StyledDoneItemText>{text.slice(0, text.length - 13)}</StyledDoneItemText>
       <StyledIconsContainer>
         <StyledRollBackArrowIcon
           icon={faArrowLeftLong}

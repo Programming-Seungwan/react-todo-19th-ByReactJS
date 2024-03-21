@@ -5,10 +5,20 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../../../../../context';
 
 const StyledTodoItemUI = styled.div`
-  background-color: tomato;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 20%;
+  min-height: 20%;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 5px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  &:hover {
+    background-color: #d5e9cb;
+  }
 `;
 
 const StyledTodoItemText = styled.p`
@@ -92,7 +102,7 @@ export default function TodoItemUI({ text }) {
   }
   return (
     <StyledTodoItemUI>
-      <StyledTodoItemText>{text}</StyledTodoItemText>
+      <StyledTodoItemText>{text.slice(0, text.length - 13)}</StyledTodoItemText>
       <StyledIconsContainer>
         <StyledCheckIcon icon={faCheck} onClick={handleClickCheckIcon} />
         <StyledTrashCanIcon icon={faTrashCan} onClick={handleClickTrashIcon} />

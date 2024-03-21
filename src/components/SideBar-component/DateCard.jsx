@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 const StyledDateCard = styled.div`
   display: flex;
@@ -8,11 +10,13 @@ const StyledDateCard = styled.div`
   align-items: center;
   padding-left: 20px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
+  column-gap: 20px;
+  border-radius: 5px;
 
   &:hover {
     cursor: pointer;
-    background-color: #d5eacb;
+    background-color: #bcdbad;
   }
 `;
 
@@ -41,5 +45,10 @@ export default function DateCard({ date }) {
     setSelectedDayTodoList(prevLocalStorageTodoData);
     setSelectedDayDoneList(prevLocalStorageDoneData);
   }
-  return <StyledDateCard onClick={handleClickDateCard}>{date}</StyledDateCard>;
+  return (
+    <StyledDateCard onClick={handleClickDateCard}>
+      <FontAwesomeIcon icon={faCalendar} />
+      {date}
+    </StyledDateCard>
+  );
 }

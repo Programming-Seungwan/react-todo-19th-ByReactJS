@@ -6,15 +6,9 @@ const StyledMainContentFooter = styled.footer`
   align-items: flex-end;
   justify-content: flex-start;
   color: rgba(85, 85, 85, 0.8);
-  /* &::before {
-    background-color: hsla(0, 0%, 52%, 0.3);
-    content: '';
-    height: 1px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  } */
+  @media screen and (max-width: 768px) {
+    background-color: #bcdbad;
+  }
 `;
 
 export default function MainContentFooter() {

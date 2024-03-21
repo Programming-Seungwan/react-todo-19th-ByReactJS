@@ -8,7 +8,8 @@ const StyledDoneContainer = styled.div`
   flex-grow: 1;
   flex-shrink: 0;
   width: 50%;
-  outline: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 0.75px solid black;
 `;
 
 export default function DoneContainer() {

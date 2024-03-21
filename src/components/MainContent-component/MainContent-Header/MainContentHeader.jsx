@@ -10,6 +10,9 @@ const StyledMainContentHeader = styled.header`
   word-wrap: break-word;
   font-size: 25px;
   font-weight: 600;
+  @media screen and (max-width: 768px) {
+    background-color: #bcdbad;
+  }
 `;
 
 export default function MainContentHeader() {

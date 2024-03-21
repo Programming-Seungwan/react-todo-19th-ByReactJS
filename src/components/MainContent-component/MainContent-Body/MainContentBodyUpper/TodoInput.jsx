@@ -9,6 +9,7 @@ const StyledInputFormContainer = styled.div`
   flex-grow: 1;
   flex-shrink: 0;
   width: 100%;
+  position: relative;
 `;
 
 const StyledInputForm = styled.form`
@@ -43,6 +44,14 @@ const StyledTodoSubmitButton = styled(FontAwesomeIcon)`
   }
 `;
 
+const StyledTasksDone = styled.div`
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 20px;
+  font-weight: 500;
+`;
+
 export default function TodoInput() {
   const {
     selectedDayString,
@@ -74,6 +83,9 @@ export default function TodoInput() {
     handleClickPlusLogoButton();
   }
 
+  const todoNum = selectedDayTodoList ? selectedDayTodoList.length : 0;
+  const doneNum = selectedDayDoneList ? selectedDayDoneList.length : 0;
+
   return (
     <StyledInputFormContainer onSubmit={handleSubmitTodoInputForm}>
       <StyledInputForm>
@@ -87,6 +99,9 @@ export default function TodoInput() {
           onClick={handleClickPlusLogoButton}
         />
       </StyledInputForm>
+      <StyledTasksDone>
+        Tasks Done : {doneNum} / {doneNum + todoNum}{' '}
+      </StyledTasksDone>
     </StyledInputFormContainer>
   );
 }

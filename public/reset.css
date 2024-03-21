@@ -40,13 +40,7 @@ h6 {
   isolation: isolate;
   width: 100dvw;
   height: 100dvh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* background-image: url("/assets/images/background-image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+  background-color: #d5e9cb;
 }
 /* reset.css 설정 완료 */
 

@@ -3,10 +3,10 @@ import styled from 'styled-components';
 const StyledSideBarExplanation = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 40px;
-  font-size: 35px;
+  align-items: center;
+  font-size: 25px;
   font-weight: 600;
+  height: 80px;
 `;
 
 export default function SideBarExplanation() {

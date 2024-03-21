@@ -5,18 +5,23 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../context';
 const StyledSideBar = styled.aside`
   width: 25%;
-  /* display: flex;
-  flex-direction: column; */
+  background-color: #d5e9cb;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyledDateContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
     minmax(200px, 1fr)
   ); /* 열 너비 자동 조정 */
   grid-gap: 10px; /* 요소 사이 간격 */
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  flex-grow: 1;
 `;
 
 function getDateString(dateString, calculateDay) {
@@ -56,11 +61,13 @@ export default function SideBar() {
   return (
     <StyledSideBar>
       <SideBarExplanation />
-      <DateCard date={dateArray[4]} />
-      <DateCard date={dateArray[3]} />
-      <DateCard date={dateArray[2]} />
-      <DateCard date={dateArray[1]} />
-      <DateCard date={dateArray[0]} />
+      <StyledDateContainer>
+        <DateCard date={dateArray[4]} />
+        <DateCard date={dateArray[3]} />
+        <DateCard date={dateArray[2]} />
+        <DateCard date={dateArray[1]} />
+        <DateCard date={dateArray[0]} />
+      </StyledDateContainer>
     </StyledSideBar>
   );
 }
