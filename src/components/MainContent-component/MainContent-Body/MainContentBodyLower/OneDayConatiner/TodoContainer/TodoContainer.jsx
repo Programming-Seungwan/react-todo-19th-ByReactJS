@@ -8,6 +8,7 @@ const StyledTodoContainer = styled.div`
   flex-grow: 1;
   flex-shrink: 0;
   width: 50%;
+  outline: 1px solid black;
 `;
 
 export default function TodoContainer() {

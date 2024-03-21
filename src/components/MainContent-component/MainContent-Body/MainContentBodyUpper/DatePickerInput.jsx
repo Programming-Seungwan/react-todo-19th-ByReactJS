@@ -48,6 +48,7 @@ export default function DatePickerInput(second) {
     setSelectedDayTodoList(prevLocalStorageTodoData);
     setSelectedDayDoneList(prevLocalStorageDoneData);
   }
+
   return (
     <StyledDatePickerInputContainer>
       <StyledDatePickerInput
