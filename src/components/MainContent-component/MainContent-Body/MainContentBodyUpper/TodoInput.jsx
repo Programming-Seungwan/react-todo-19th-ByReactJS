@@ -41,7 +41,14 @@ const StyledTodoSubmitButton = styled(FontAwesomeIcon)`
 `;
 
 export default function TodoInput() {
-  const { selectedDayString, setSelectedDayString } = useContext(ThemeContext);
+  const {
+    selectedDayString,
+    setSelectedDayString,
+    selectedDayTodoList,
+    setSelectedDayTodoList,
+    selectedDayDoneList,
+    setSelectedDayDoneList,
+  } = useContext(ThemeContext);
   const todoInputRef = useRef();
   function handleSubmitTodoInputForm(event) {
     event.preventDefault();
@@ -55,6 +62,7 @@ export default function TodoInput() {
       `${todoInputRef.current.value}${currentTimeUniqueString}`
     );
     localStorage.setItem(localStorageKey, JSON.stringify(prevLocalStorageData));
+    setSelectedDayTodoList(prevLocalStorageData);
     todoInputRef.current.value = '';
   }
   return (

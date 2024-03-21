@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../../../../context';
+import TodoItemUI from './TodoItemUI';
 
 const StyledTodoContentArea = styled.div`
   flex-grow: 9;
@@ -6,7 +9,21 @@ const StyledTodoContentArea = styled.div`
 `;
 
 export default function TodoContentArea() {
+  const {
+    selectedDayString,
+    setSelectedDayString,
+    selectedDayTodoList,
+    setSelectedDayTodoList,
+    selectedDayDoneList,
+    setSelectedDayDoneList,
+  } = useContext(ThemeContext);
+
   return (
-    <StyledTodoContentArea>This is todo content area!</StyledTodoContentArea>
+    <StyledTodoContentArea>
+      {selectedDayTodoList &&
+        selectedDayTodoList.map((todo) => {
+          return <TodoItemUI text={todo} />;
+        })}
+    </StyledTodoContentArea>
   );
 }

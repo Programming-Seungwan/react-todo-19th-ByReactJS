@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SideBar from './SideBar-component/SideBar';
 import AppMainContent from './MainContent-component/AppMainContent';
 import { ThemeContext } from '../context';
@@ -24,8 +24,34 @@ export default function AppContainer() {
     new Date().toISOString().slice(0, 10)
   );
 
+  const [selectedDayTodoList, setSelectedDayTodoList] = useState(null);
+  const [selectedDayDoneList, setSelectedDayDoneList] = useState(null);
+
+  useEffect(() => {
+    const todo =
+      localStorage.getItem(`${selectedDayString}todo`) === null
+        ? []
+        : JSON.parse(localStorage.getItem(`${selectedDayString}todo`));
+
+    const done =
+      localStorage.getItem(`${selectedDayString}done`) === null
+        ? []
+        : JSON.parse(localStorage.getItem(`${selectedDayString}done`));
+    setSelectedDayTodoList(todo);
+    setSelectedDayDoneList(done);
+  }, []);
+
   return (
-    <ThemeContext.Provider value={{ selectedDayString, setSelectedDayString }}>
+    <ThemeContext.Provider
+      value={{
+        selectedDayString,
+        setSelectedDayString,
+        selectedDayTodoList,
+        setSelectedDayTodoList,
+        selectedDayDoneList,
+        setSelectedDayDoneList,
+      }}
+    >
       <StyledAppContainer>
         <SideBar />
         <AppMainContent />
