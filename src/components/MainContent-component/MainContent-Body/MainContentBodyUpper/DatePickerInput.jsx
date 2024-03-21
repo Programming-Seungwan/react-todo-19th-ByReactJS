@@ -23,7 +23,7 @@ const StyledDatePickerInput = styled.input`
 `;
 
 export default function DatePickerInput(second) {
-  const {selectedDayString, setSelectedDayString} = useContext(ThemeContext);
+  const { selectedDayString, setSelectedDayString } = useContext(ThemeContext);
 
   function handleChangeDate(event) {
     const newSelectedDayString = event.target.value;
@@ -31,7 +31,11 @@ export default function DatePickerInput(second) {
   }
   return (
     <StyledDatePickerInputContainer>
-      <StyledDatePickerInput type="date" onChange={handleChangeDate} value={selectedDayString}/>
+      <StyledDatePickerInput
+        type="date"
+        onChange={handleChangeDate}
+        value={selectedDayString}
+      />
     </StyledDatePickerInputContainer>
   );
 }

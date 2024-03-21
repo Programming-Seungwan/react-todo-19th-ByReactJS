@@ -11,7 +11,7 @@ const StyledAppContainer = styled.div`
   height: 100vh;
   display: flex;
   margin: 0 auto;
-  @media screen  and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
@@ -20,7 +20,9 @@ const StyledAppContainer = styled.div`
 `;
 
 export default function AppContainer() {
-  const [selectedDayString, setSelectedDayString] = useState(new Date().toISOString().slice(0, 10));
+  const [selectedDayString, setSelectedDayString] = useState(
+    new Date().toISOString().slice(0, 10)
+  );
 
   return (
     <ThemeContext.Provider value={{ selectedDayString, setSelectedDayString }}>

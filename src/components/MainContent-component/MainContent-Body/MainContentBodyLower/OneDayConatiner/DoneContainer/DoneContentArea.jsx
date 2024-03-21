@@ -7,8 +7,6 @@ const StyledDoneContentArea = styled.div`
 
 export default function DoneContentArea() {
   return (
-    <StyledDoneContentArea>
-      This is done content area!
-    </StyledDoneContentArea>
+    <StyledDoneContentArea>This is done content area!</StyledDoneContentArea>
   );
 }

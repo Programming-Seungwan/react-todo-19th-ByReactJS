@@ -7,8 +7,6 @@ const StyledTodoContentArea = styled.div`
 
 export default function TodoContentArea() {
   return (
-    <StyledTodoContentArea>
-      This is todo content area!
-    </StyledTodoContentArea>
+    <StyledTodoContentArea>This is todo content area!</StyledTodoContentArea>
   );
 }

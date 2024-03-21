@@ -13,5 +13,7 @@ const StyledMainContentHeader = styled.header`
 `;
 
 export default function MainContentHeader() {
-  return <StyledMainContentHeader>Todo List Web Application</StyledMainContentHeader>;
+  return (
+    <StyledMainContentHeader>Todo List Web Application</StyledMainContentHeader>
+  );
 }
