@@ -73,15 +73,26 @@ export default function TodoItemUI({ text }) {
     );
 
     setSelectedDayTodoList(prevLocalStorageData);
+    setSelectedDayDoneList(prevLocalStorageDoneData);
   }
 
-  function handleClickTrashIcon() {}
+  // 로컬 스토리지에서 삭제하고 UI에서도 삭제를 해야함
+  function handleClickTrashIcon() {
+    const prevLocalStorageData = JSON.parse(
+      localStorage.getItem(localStorageTodoKey)
+    );
+
+    const prevLocalStorageIndex = prevLocalStorageData.indexOf(text);
+    prevLocalStorageData.splice(prevLocalStorageIndex, 1);
+    localStorage.setItem(localStorageTodoKey, prevLocalStorageData);
+    setSelectedDayTodoList(prevLocalStorageData);
+  }
   return (
     <StyledTodoItemUI>
       <StyledTodoItemText>{text}</StyledTodoItemText>
       <StyledIconsContainer>
         <StyledCheckIcon icon={faCheck} onClick={handleClickCheckIcon} />
-        <StyledTrashCanIcon icon={faTrashCan} />
+        <StyledTrashCanIcon icon={faTrashCan} onClick={handleClickTrashIcon} />
       </StyledIconsContainer>
     </StyledTodoItemUI>
   );

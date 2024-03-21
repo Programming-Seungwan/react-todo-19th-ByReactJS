@@ -17,7 +17,7 @@ export default function TodoContentArea() {
     selectedDayDoneList,
     setSelectedDayDoneList,
   } = useContext(ThemeContext);
-
+  console.log(selectedDayTodoList);
   return (
     <StyledTodoContentArea>
       {selectedDayTodoList &&
