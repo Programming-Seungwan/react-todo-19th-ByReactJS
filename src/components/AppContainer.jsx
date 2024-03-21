@@ -9,6 +9,12 @@ const StyledAppContainer = styled.div`
   height: 100vh;
   display: flex;
   margin: 0 auto;
+  @media screen  and (max-width: 768px){
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0 5%;
+  }
 `;
 
 export default function AppContainer() {
