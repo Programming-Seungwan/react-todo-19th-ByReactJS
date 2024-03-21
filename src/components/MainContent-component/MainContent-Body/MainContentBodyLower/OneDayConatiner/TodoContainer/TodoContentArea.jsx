@@ -22,7 +22,7 @@ export default function TodoContentArea() {
     <StyledTodoContentArea>
       {selectedDayTodoList &&
         selectedDayTodoList.map((todo) => {
-          return <TodoItemUI text={todo} />;
+          return <TodoItemUI text={todo} key={todo} />;
         })}
     </StyledTodoContentArea>
   );
