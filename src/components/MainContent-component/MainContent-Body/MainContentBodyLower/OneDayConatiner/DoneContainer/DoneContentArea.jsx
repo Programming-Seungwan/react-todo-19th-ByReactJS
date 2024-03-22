@@ -13,14 +13,7 @@ const StyledDoneContentArea = styled.div`
 `;
 
 export default function DoneContentArea() {
-  const {
-    selectedDayString,
-    setSelectedDayString,
-    selectedDayTodoList,
-    setSelectedDayTodoList,
-    selectedDayDoneList,
-    setSelectedDayDoneList,
-  } = useContext(ThemeContext);
+  const { selectedDayDoneList } = useContext(ThemeContext);
 
   return (
     <StyledDoneContentArea className="scroll-box">

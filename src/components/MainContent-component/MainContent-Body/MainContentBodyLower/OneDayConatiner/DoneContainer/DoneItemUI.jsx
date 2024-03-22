@@ -22,8 +22,6 @@ const StyledDoneItemUI = styled.div`
 `;
 
 const StyledDoneItemText = styled.p`
-  /* flex-grow: 6;
-  flex-shrink: 0; */
   width: 65%;
 `;
 
@@ -48,14 +46,8 @@ const StyledTrashCanIcon = styled(FontAwesomeIcon)`
 `;
 
 export default function DoneItemUI({ text }) {
-  const {
-    selectedDayString,
-    setSelectedDayString,
-    selectedDayTodoList,
-    setSelectedDayTodoList,
-    selectedDayDoneList,
-    setSelectedDayDoneList,
-  } = useContext(ThemeContext);
+  const { selectedDayString, setSelectedDayTodoList, setSelectedDayDoneList } =
+    useContext(ThemeContext);
 
   const localStorageTodoKey = `${selectedDayString}todo`;
   const localStorageDoneKey = `${selectedDayString}done`;

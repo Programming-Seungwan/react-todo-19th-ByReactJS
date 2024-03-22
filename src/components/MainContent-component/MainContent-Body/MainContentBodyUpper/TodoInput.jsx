@@ -31,7 +31,6 @@ const StyledTodoTextInput = styled.input`
   text-indent: 15px;
   min-width: 300px;
   border-radius: 5px;
-  /* background-color: tomato; */
   @media screen and (max-width: 768px) {
     width: 250px;
     min-width: 250px;
@@ -61,11 +60,9 @@ const StyledTasksDone = styled.div`
 export default function TodoInput() {
   const {
     selectedDayString,
-    setSelectedDayString,
     selectedDayTodoList,
     setSelectedDayTodoList,
     selectedDayDoneList,
-    setSelectedDayDoneList,
   } = useContext(ThemeContext);
   const todoInputRef = useRef();
 

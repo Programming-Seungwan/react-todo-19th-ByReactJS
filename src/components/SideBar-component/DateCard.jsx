@@ -22,11 +22,8 @@ const StyledDateCard = styled.div`
 
 export default function DateCard({ date }) {
   const {
-    selectedDayString,
     setSelectedDayString,
-    selectedDayTodoList,
     setSelectedDayTodoList,
-    selectedDayDoneList,
     setSelectedDayDoneList,
   } = useContext(ThemeContext);
 

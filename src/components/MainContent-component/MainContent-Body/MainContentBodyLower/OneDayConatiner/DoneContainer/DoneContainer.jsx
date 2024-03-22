@@ -5,11 +5,8 @@ import DoneContentArea from './DoneContentArea';
 const StyledDoneContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* flex-grow: 1; */
   flex-shrink: 0;
   width: 49%;
-  /* border-top: 1px solid black;
-  border-left: 0.75px solid black; */
   background-color: #bcdbad;
   border-radius: 10px;
   @media screen and (max-width: 768px) {

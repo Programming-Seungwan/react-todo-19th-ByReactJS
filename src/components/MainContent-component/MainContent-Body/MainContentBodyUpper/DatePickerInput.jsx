@@ -20,16 +20,13 @@ const StyledDatePickerInput = styled.input`
   border-radius: 5px;
   padding-right: 5px;
   font-weight: 500;
-  /* background-color: tomato; */
 `;
 
 export default function DatePickerInput(second) {
   const {
     selectedDayString,
     setSelectedDayString,
-    selectedDayTodoList,
     setSelectedDayTodoList,
-    selectedDayDoneList,
     setSelectedDayDoneList,
   } = useContext(ThemeContext);
 

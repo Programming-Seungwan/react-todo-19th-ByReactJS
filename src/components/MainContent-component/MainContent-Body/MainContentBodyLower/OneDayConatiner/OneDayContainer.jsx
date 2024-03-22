@@ -6,7 +6,6 @@ const StyledOneDayContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* column-gap: 10px; */
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: space-between;
