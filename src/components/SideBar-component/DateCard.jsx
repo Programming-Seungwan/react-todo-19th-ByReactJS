@@ -12,7 +12,7 @@ const StyledDateCard = styled.div`
   font-size: 22px;
   font-weight: 500;
   column-gap: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 
   &:hover {
     cursor: pointer;

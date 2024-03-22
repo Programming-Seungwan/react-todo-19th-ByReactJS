@@ -3,11 +3,22 @@ import SideBarExplanation from './SideBarExplanation';
 import DateCard from './DateCard';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context';
-const StyledSideBar = styled.aside`
-  width: 25%;
-  background-color: #d5e9cb;
+
+const StyledSideBarDateOuterContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 20px;
+`;
+
+const StyledSideBar = styled.aside`
+  width: 20%;
+  /* background-color: #d5e9cb; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  /* margin: auto; */
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -61,13 +72,15 @@ export default function SideBar() {
   return (
     <StyledSideBar>
       <SideBarExplanation />
-      <StyledDateContainer>
-        <DateCard date={dateArray[4]} />
-        <DateCard date={dateArray[3]} />
-        <DateCard date={dateArray[2]} />
-        <DateCard date={dateArray[1]} />
-        <DateCard date={dateArray[0]} />
-      </StyledDateContainer>
+      <StyledSideBarDateOuterContainer>
+        <StyledDateContainer>
+          <DateCard date={dateArray[4]} />
+          <DateCard date={dateArray[3]} />
+          <DateCard date={dateArray[2]} />
+          <DateCard date={dateArray[1]} />
+          <DateCard date={dateArray[0]} />
+        </StyledDateContainer>
+      </StyledSideBarDateOuterContainer>
     </StyledSideBar>
   );
 }

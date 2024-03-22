@@ -7,6 +7,9 @@ const StyledMainContentBodyUpper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #bcdbad;
+  border-radius: 10px;
+  margin-bottom: 20px;
 `;
 
 export default function MainContentBodyUpper() {

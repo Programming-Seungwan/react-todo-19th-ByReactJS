@@ -19,7 +19,8 @@ const StyledInputForm = styled.form`
   column-gap: 15px;
   @media screen and (max-width: 768px) {
     justify-content: space-evenly;
-    column-gap: 0;
+    justify-content: center;
+    column-gap: 10px;
   }
 `;
 
@@ -30,6 +31,7 @@ const StyledTodoTextInput = styled.input`
   text-indent: 15px;
   min-width: 300px;
   border-radius: 5px;
+  /* background-color: tomato; */
   @media screen and (max-width: 768px) {
     width: 250px;
     min-width: 250px;
@@ -50,6 +52,10 @@ const StyledTasksDone = styled.div`
   right: 25px;
   font-size: 20px;
   font-weight: 500;
+  @media screen and (max-width: 768px) {
+    bottom: 5px;
+    right: 8px;
+  }
 `;
 
 export default function TodoInput() {

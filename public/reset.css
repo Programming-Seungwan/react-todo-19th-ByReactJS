@@ -40,7 +40,9 @@ h6 {
   isolation: isolate;
   width: 100dvw;
   height: 100dvh;
-  background-color: #d5e9cb;
+  background-color: #bcdbad;
+  display: flex;
+  align-items: center;
 }
 /* reset.css 설정 완료 */
 

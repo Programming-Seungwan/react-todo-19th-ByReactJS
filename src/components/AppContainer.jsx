@@ -8,9 +8,11 @@ const StyledAppContainer = styled.div`
   width: 90%;
   max-width: 90%;
   min-width: 90%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   margin: 0 auto;
+  background-color: #eaeff1;
+  border-radius: 15px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -18,6 +20,7 @@ const StyledAppContainer = styled.div`
     min-width: 100%;
     padding: 0 5%;
     background-color: #bcdbad;
+    height: 100dvh;
   }
 `;
 

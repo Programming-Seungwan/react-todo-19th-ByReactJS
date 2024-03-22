@@ -10,7 +10,7 @@ const StyledMainContentBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #bcdbad;
+  /* background-color: #bcdbad; */
   border-radius: 10px;
   @media screen and (max-width: 768px) {
     background-color: #bcdbad;

@@ -11,6 +11,10 @@ const StyledDoneLabel = styled.div`
   align-items: center;
   font-size: 25px;
   font-weight: 600;
+  @media screen and (max-width: 768px) {
+    height: 50px;
+    min-height: 50px;
+  }
 `;
 
 export default function DoneLabel() {

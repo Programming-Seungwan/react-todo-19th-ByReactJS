@@ -10,7 +10,7 @@ const StyledAppMainContent = styled.main`
   height: 100%;
   justify-content: space-between;
   position: relative;
-  background-color: #d5eacb;
+  /* background-color: #d5eacb; */
   @media screen and (max-width: 768px) {
     width: 100%;
   }
