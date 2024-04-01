@@ -32,6 +32,8 @@ export default function AppContainer() {
   const [selectedDayTodoList, setSelectedDayTodoList] = useState(null);
   const [selectedDayDoneList, setSelectedDayDoneList] = useState(null);
 
+  // 의존성 배열을 제대로 사용하지 않은 느낌이 강함. 관련 리팩터링 진행
+
   useEffect(() => {
     const todo =
       localStorage.getItem(`${selectedDayString}todo`) === null
@@ -44,7 +46,7 @@ export default function AppContainer() {
         : JSON.parse(localStorage.getItem(`${selectedDayString}done`));
     setSelectedDayTodoList(todo);
     setSelectedDayDoneList(done);
-  }, []);
+  }, [selectedDayString]);
 
   return (
     <TodoContext.Provider

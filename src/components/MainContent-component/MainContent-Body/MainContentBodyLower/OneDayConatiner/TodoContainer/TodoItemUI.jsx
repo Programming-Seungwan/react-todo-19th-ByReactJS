@@ -9,7 +9,6 @@ const StyledTodoItemUI = styled.div`
   justify-content: space-between;
   align-items: center;
   height: fit-content;
-  /* min-height: 20%; */
   padding-left: 20px;
   font-size: 20px;
   font-weight: 500;

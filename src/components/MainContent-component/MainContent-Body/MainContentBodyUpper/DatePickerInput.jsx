@@ -33,18 +33,6 @@ export default function DatePickerInput(second) {
   function handleChangeDate(event) {
     const newSelectedDayString = event.target.value;
     setSelectedDayString(newSelectedDayString);
-    const newSelectedDayTodoKey = `${newSelectedDayString}todo`;
-    const newSelectedDayDoneKey = `${newSelectedDayString}done`;
-    const prevLocalStorageTodoData =
-      localStorage.getItem(newSelectedDayTodoKey) === null
-        ? []
-        : JSON.parse(localStorage.getItem(newSelectedDayTodoKey));
-    const prevLocalStorageDoneData =
-      localStorage.getItem(newSelectedDayDoneKey) === null
-        ? []
-        : JSON.parse(localStorage.getItem(newSelectedDayDoneKey));
-    setSelectedDayTodoList(prevLocalStorageTodoData);
-    setSelectedDayDoneList(prevLocalStorageDoneData);
   }
 
   return (
