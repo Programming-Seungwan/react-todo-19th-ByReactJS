@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { useContext, useRef } from 'react';
-import { ThemeContext } from '../../../../context';
+import { TodoContext } from '../../../../context';
 import makeUniqueTodoDateString from '../../../../utils/makeTimeString';
 
 const StyledInputFormContainer = styled.div`
@@ -63,7 +63,7 @@ export default function TodoInput() {
     selectedDayTodoList,
     setSelectedDayTodoList,
     selectedDayDoneList,
-  } = useContext(ThemeContext);
+  } = useContext(TodoContext);
   const todoInputRef = useRef();
 
   function handleClickPlusLogoButton() {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
-import { ThemeContext } from '../../../../../../context';
+import { TodoContext } from '../../../../../../context';
 import DoneItemUI from './DoneItemUI';
 
 const StyledDoneContentArea = styled.div`
@@ -13,7 +13,7 @@ const StyledDoneContentArea = styled.div`
 `;
 
 export default function DoneContentArea() {
-  const { selectedDayDoneList } = useContext(ThemeContext);
+  const { selectedDayDoneList } = useContext(TodoContext);
 
   return (
     <StyledDoneContentArea className="scroll-box">

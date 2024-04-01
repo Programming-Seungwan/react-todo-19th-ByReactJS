@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
-import { ThemeContext } from '../../../../../../context';
+import { TodoContext } from '../../../../../../context';
 
 const StyledTodoItemUI = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const StyledTrashCanIcon = styled(FontAwesomeIcon)`
 
 export default function TodoItemUI({ text }) {
   const { selectedDayString, setSelectedDayTodoList, setSelectedDayDoneList } =
-    useContext(ThemeContext);
+    useContext(TodoContext);
 
   const localStorageTodoKey = `${selectedDayString}todo`;
   const localStorageDoneKey = `${selectedDayString}done`;

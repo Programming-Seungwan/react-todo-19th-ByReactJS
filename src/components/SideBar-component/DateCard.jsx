@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
-import { ThemeContext } from '../../context';
+import { TodoContext } from '../../context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,7 +25,7 @@ export default function DateCard({ date }) {
     setSelectedDayString,
     setSelectedDayTodoList,
     setSelectedDayDoneList,
-  } = useContext(ThemeContext);
+  } = useContext(TodoContext);
 
   function handleClickDateCard() {
     setSelectedDayString(date);

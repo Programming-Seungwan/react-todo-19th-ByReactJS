@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import SideBarExplanation from './SideBarExplanation';
 import DateCard from './DateCard';
 import { useContext } from 'react';
-import { ThemeContext } from '../../context';
+import { TodoContext } from '../../context';
 
 const StyledSideBarDateOuterContainer = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ function getDateString(dateString, calculateDay) {
 }
 
 export default function SideBar() {
-  const { selectedDayString } = useContext(ThemeContext);
+  const { selectedDayString } = useContext(TodoContext);
 
   const dateArray = [];
   for (let i = -2; i <= 2; i++) {

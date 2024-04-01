@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import SideBar from './SideBar-component/SideBar';
 import AppMainContent from './MainContent-component/AppMainContent';
-import { ThemeContext } from '../context';
+import { TodoContext } from '../context';
 
 const StyledAppContainer = styled.div`
   width: 90%;
@@ -47,7 +47,7 @@ export default function AppContainer() {
   }, []);
 
   return (
-    <ThemeContext.Provider
+    <TodoContext.Provider
       value={{
         selectedDayString,
         setSelectedDayString,
@@ -61,6 +61,6 @@ export default function AppContainer() {
         <SideBar />
         <AppMainContent />
       </StyledAppContainer>
-    </ThemeContext.Provider>
+    </TodoContext.Provider>
   );
 }

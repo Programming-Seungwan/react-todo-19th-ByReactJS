@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ThemeContext } from '../../../../context';
+import { TodoContext } from '../../../../context';
 import { useContext } from 'react';
 
 const StyledDatePickerInputContainer = styled.div`
@@ -28,7 +28,7 @@ export default function DatePickerInput(second) {
     setSelectedDayString,
     setSelectedDayTodoList,
     setSelectedDayDoneList,
-  } = useContext(ThemeContext);
+  } = useContext(TodoContext);
 
   function handleChangeDate(event) {
     const newSelectedDayString = event.target.value;
