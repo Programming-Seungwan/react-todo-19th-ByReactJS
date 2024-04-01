@@ -22,13 +22,8 @@ const StyledDatePickerInput = styled.input`
   font-weight: 500;
 `;
 
-export default function DatePickerInput(second) {
-  const {
-    selectedDayString,
-    setSelectedDayString,
-    setSelectedDayTodoList,
-    setSelectedDayDoneList,
-  } = useContext(TodoContext);
+export default function DatePickerInput() {
+  const { selectedDayString, setSelectedDayString } = useContext(TodoContext);
 
   function handleChangeDate(event) {
     const newSelectedDayString = event.target.value;

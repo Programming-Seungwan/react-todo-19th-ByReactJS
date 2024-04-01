@@ -66,7 +66,8 @@ export default function TodoInput() {
   } = useContext(TodoContext);
   const todoInputRef = useRef();
 
-  function handleClickPlusLogoButton() {
+  function handleSubmitTodoInputForm(event) {
+    event.preventDefault();
     const localStorageKey = `${selectedDayString}todo`;
     const prevLocalStorageData =
       localStorage.getItem(localStorageKey) === null
@@ -81,11 +82,6 @@ export default function TodoInput() {
     todoInputRef.current.value = '';
   }
 
-  function handleSubmitTodoInputForm(event) {
-    event.preventDefault();
-    handleClickPlusLogoButton();
-  }
-
   const todoNum = selectedDayTodoList ? selectedDayTodoList.length : 0;
   const doneNum = selectedDayDoneList ? selectedDayDoneList.length : 0;
 
@@ -97,10 +93,7 @@ export default function TodoInput() {
           placeholder="Add your new Todo List!"
           ref={todoInputRef}
         />
-        <StyledTodoSubmitButton
-          icon={faCirclePlus}
-          onClick={handleClickPlusLogoButton}
-        />
+        <StyledTodoSubmitButton icon={faCirclePlus} />
       </StyledInputForm>
       <StyledTasksDone>
         Tasks Done : {doneNum} / {doneNum + todoNum}{' '}
